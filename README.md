@@ -75,7 +75,8 @@
 ---
 #### 备注
 **需要修改Oracle默认安装位置或者SID等其他设置时，需要修改所有脚本中Oracle基础变量与Oracle安装Response文件内的相关设置**
-**默认设置：**
+
+默认设置：
   * 安装位置：/opt/app/
   * SID: ORCL
   * GlobalDbName: ORCL
