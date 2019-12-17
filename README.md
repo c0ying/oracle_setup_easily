@@ -64,17 +64,17 @@
 
    ```shell
    #1.找到“orcl:/opt/app/oracle/product/11.2.0/db_1:N”， 
-#改为“orcl:/opt/app/oracle/product/11.2.0/db_1:Y”。修改完成后保存
-vi /etc/oratab
-#2.创建自启动所需的启动脚本
-mkdir /home/oracle/scripts && cp /tmp/oracle_install_tools/scripts/start_all.sh /home/oracle/scripts/ && cp /tmp/oracle_install_tools/scripts/stop_all.sh /home/oracle/scripts/ &&
+   #改为“orcl:/opt/app/oracle/product/11.2.0/db_1:Y”。修改完成后保存
+   vi /etc/oratab
+   #2.创建自启动所需的启动脚本
+   mkdir /home/oracle/scripts && cp /tmp/oracle_install_tools/scripts/start_all.sh /home/oracle/scripts/ && cp /tmp/oracle_install_tools/scripts/stop_all.sh /home/oracle/scripts/ &&
 chmod 750 /home/oracle/scripts/*
-#3.加入systemctl启动管理
-cp /tmp/oracle_install_tools/scripts/oracle.service /usr/lib/systemd/system
+   #3.加入systemctl启动管理
+   cp /tmp/oracle_install_tools/scripts/oracle.service /usr/lib/systemd/system
 systemctl enable oracle
    ```
 
-* #### 备注
+#### 备注
 **需要修改Oracle默认安装位置或者SID等其他设置时，需要修改所有脚本Oracle基础变量与Oracle安装Response文件内的相关设置**
   默认设置：
 
@@ -83,8 +83,8 @@ systemctl enable oracle
   SID: ORCL
 
   GlobalDbName: ORCL
-  
+
   HostName: oracle
-  
+
 
 
