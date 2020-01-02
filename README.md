@@ -52,10 +52,9 @@
      ```shell
      su oracle
      netca /silent /responseFile /tmp/oracle_install_tools/response/netca.rsp
-   ```
+     ```
      
    * 建库
-
      ```shell
      dbca -silent -responseFile /tmp/oracle_install_tools/response/dbca.rsp
      ```
