@@ -1,6 +1,6 @@
 # Linux环境简易安装Oracle11gR2步骤
 
-在某些古老又传统的项目中，还是会坚持使用Oracle数据库。其中Oracle11g官方并没有提供docker镜像，自己制作或者使用别人制作镜像都很难保证生产环境是否能正常稳定运行，所以还是只能老老实实直接安装在服务器上。
+在某些古老或者传统的项目中，还是会坚持使用Oracle数据库。其中Oracle11g官方并没有提供docker镜像，自己制作或者使用别人制作镜像都很难保证因为Docker的兼容性问题在生产环境是否能正常稳定运行，所以还是只能老老实实直接安装在服务器上。
 
 本教程是在Centos 7系统下 **<u>使用静默模式</u>** 安装Oracle11gR2，并提供封装脚本，让你可以以最快的速度安装完成
 
@@ -44,14 +44,16 @@
      安装结束后，需要使用root用户手动执行以下文件
 
      ```shell
+     su root
      /opt/app/oracle/oraInventory/orainstRoot.sh
      /opt/app/oracle/product/11.2.0.1/db_1/root.sh
      ```
    * 监听器安装
      ```shell
+     su oracle
      netca /silent /responseFile /tmp/oracle_install_tools/response/netca.rsp
-     ```
-
+   ```
+     
    * 建库
 
      ```shell
